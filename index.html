@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -38,38 +37,6 @@
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 36px 20px 64px;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      margin-bottom: 28px;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .lang-switch {
-      display: inline-flex;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    .lang-switch button {
-      border: none;
-      background: transparent;
-      padding: 8px 14px;
-      cursor: pointer;
-      font: inherit;
-      color: var(--muted);
-    }
-
-    .lang-switch button.active {
-      background: #f3f4f6;
-      color: var(--text);
-      font-weight: 600;
     }
 
     .hero {
@@ -158,9 +125,6 @@
       text-align: center;
     }
 
-    .lang-block { display: none; }
-    .lang-block.active { display: block; }
-
     @media (max-width: 760px) {
       .hero {
         grid-template-columns: 1fr;
@@ -176,210 +140,99 @@
 </head>
 <body>
   <div class="container">
-    <div class="topbar">
-      <div class="lang-switch" aria-label="Language switcher">
-        <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
-        <button id="btn-en" onclick="switchLang('en')">English</button>
-      </div>
-    </div>
-
     <div class="hero">
       <img src="photo.jpg" alt="Profile photo" class="photo" />
 
       <div>
-        <div class="lang-block active" data-lang="zh">
-          <h1 class="name">罗牧涵</h1>
-          <div class="subtitle">新加坡国立大学数学系博士生</div>
-          <p>
-            欢迎来到我的个人主页。我目前的研究方向是复动力系统，特别关注高维复动力系统、
-            holomorphic correspondences，以及周期点的等分布问题。
-          </p>
-          <ul class="contact">
-            <li><strong>Email:</strong> yourname@u.nus.edu</li>
-            <li><strong>Office:</strong> Department of Mathematics, National University of Singapore</li>
-            <li><strong>Address:</strong> 10 Lower Kent Ridge Road, Singapore</li>
-          </ul>
-          <div class="links">
-            <a href="cv.pdf" target="_blank">CV</a>
-            <a href="#publications">论文</a>
-            <a href="#talks">报告</a>
-            <a href="#teaching">教学</a>
-            <a href="https://arxiv.org/" target="_blank">arXiv</a>
-            <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-          </div>
-        </div>
-
-        <div class="lang-block" data-lang="en">
-          <h1 class="name">Muhan Luo</h1>
-          <div class="subtitle">PhD Candidate, Department of Mathematics, National University of Singapore</div>
-          <p>
-            Welcome to my homepage. My research interests lie in complex dynamics, especially
-            higher-dimensional complex dynamics, holomorphic correspondences, and equidistribution
-            problems for periodic points.
-          </p>
-          <ul class="contact">
-            <li><strong>Email:</strong> yourname@u.nus.edu</li>
-            <li><strong>Office:</strong> Department of Mathematics, National University of Singapore</li>
-            <li><strong>Address:</strong> 10 Lower Kent Ridge Road, Singapore</li>
-          </ul>
-          <div class="links">
-            <a href="cv.pdf" target="_blank">CV</a>
-            <a href="#publications">Publications</a>
-            <a href="#talks">Talks</a>
-            <a href="#teaching">Teaching</a>
-            <a href="https://arxiv.org/" target="_blank">arXiv</a>
-            <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-          </div>
+        <h1 class="name">Muhan Luo</h1>
+        <div class="subtitle">PhD Candidate, Department of Mathematics, National University of Singapore</div>
+        <p>
+          Welcome to my homepage. My research interests lie in complex dynamics, especially
+          higher-dimensional complex dynamics, holomorphic correspondences, and equidistribution
+          problems for periodic points.
+        </p>
+        <ul class="contact">
+          <li><strong>Email:</strong> yourname@u.nus.edu</li>
+          <li><strong>Office:</strong> Department of Mathematics, National University of Singapore</li>
+          <li><strong>Address:</strong> 10 Lower Kent Ridge Road, Singapore</li>
+        </ul>
+        <div class="links">
+          <a href="cv.pdf" target="_blank">CV</a>
+          <a href="#publications">Publications</a>
+          <a href="#talks">Talks</a>
+          <a href="#teaching">Teaching</a>
+          <a href="https://arxiv.org/" target="_blank">arXiv</a>
+          <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
         </div>
       </div>
     </div>
 
     <section>
-      <div class="lang-block active" data-lang="zh">
-        <h2>研究兴趣</h2>
-        <p>
-          复动力系统；高维复动力系统；holomorphic correspondences；
-          Green currents；pluripotential theory；周期点等分布。
-        </p>
-      </div>
-      <div class="lang-block" data-lang="en">
-        <h2>Research Interests</h2>
-        <p>
-          Complex dynamics; higher-dimensional complex dynamics; holomorphic correspondences;
-          Green currents; pluripotential theory; equidistribution of periodic points.
-        </p>
-      </div>
+      <h2>Research Interests</h2>
+      <p>
+        Complex dynamics; higher-dimensional complex dynamics; holomorphic correspondences;
+        Green currents; pluripotential theory; equidistribution of periodic points.
+      </p>
     </section>
 
     <section>
-      <div class="lang-block active" data-lang="zh">
-        <h2>教育经历</h2>
-        <ul class="clean">
-          <li>
-            <strong>National University of Singapore</strong>, Ph.D. in Mathematics, 2022–2026 (expected)
-          </li>
-          <li>
-            <strong>Peking University</strong>, B.S. in Mathematics, 2018–2022
-          </li>
-        </ul>
-      </div>
-      <div class="lang-block" data-lang="en">
-        <h2>Education</h2>
-        <ul class="clean">
-          <li>
-            <strong>National University of Singapore</strong>, Ph.D. in Mathematics, 2022–2026 (expected)
-          </li>
-          <li>
-            <strong>Peking University</strong>, B.S. in Mathematics, 2018–2022
-          </li>
-        </ul>
-      </div>
+      <h2>Education</h2>
+      <ul class="clean">
+        <li>
+          <strong>National University of Singapore</strong>, Ph.D. in Mathematics, 2022–2026 (expected)
+        </li>
+        <li>
+          <strong>Peking University</strong>, B.S. in Mathematics, 2018–2022
+        </li>
+      </ul>
     </section>
 
     <section id="publications">
-      <div class="lang-block active" data-lang="zh">
-        <h2>论文与预印本</h2>
-        <ul class="clean">
-          <li>
-            <span class="paper-title">Green currents of holomorphic correspondences on compact Kähler manifolds</span><br />
-            <span class="meta">Muhan Luo, Marco Vergamini. 2026.</span><br />
-            <a href="https://arxiv.org/abs/2603.06093" target="_blank">arXiv</a>
-            /
-            <a href="papers/LV26.pdf" target="_blank">PDF</a>
-          </li>
-          <li>
-            <span class="paper-title">在这里添加你的下一篇论文标题</span><br />
-            <span class="meta">Authors. Journal / Preprint status.</span><br />
-            <a href="#">Link</a>
-          </li>
-        </ul>
-      </div>
-      <div class="lang-block" data-lang="en">
-        <h2>Publications and Preprints</h2>
-        <ul class="clean">
-          <li>
-            <span class="paper-title">Green currents of holomorphic correspondences on compact Kähler manifolds</span><br />
-            <span class="meta">Muhan Luo, Marco Vergamini. 2026.</span><br />
-            <a href="https://arxiv.org/abs/2603.06093" target="_blank">arXiv</a>
-            /
-            <a href="papers/LV26.pdf" target="_blank">PDF</a>
-          </li>
-          <li>
-            <span class="paper-title">Add your next paper title here</span><br />
-            <span class="meta">Authors. Journal / Preprint status.</span><br />
-            <a href="#">Link</a>
-          </li>
-        </ul>
-      </div>
+      <h2>Publications and Preprints</h2>
+      <ul class="clean">
+        <li>
+          <span class="paper-title">Green currents of holomorphic correspondences on compact Kähler manifolds</span><br />
+          <span class="meta">Muhan Luo, Marco Vergamini. 2026.</span><br />
+          <a href="https://arxiv.org/abs/2603.06093" target="_blank">arXiv</a>
+          /
+          <a href="papers/LV26.pdf" target="_blank">PDF</a>
+        </li>
+        <li>
+          <span class="paper-title">Add your next paper title here</span><br />
+          <span class="meta">Authors. Journal / Preprint status.</span><br />
+          <a href="#">Link</a>
+        </li>
+      </ul>
     </section>
 
     <section id="talks">
-      <div class="lang-block active" data-lang="zh">
-        <h2>报告</h2>
-        <ul class="clean">
-          <li>
-            Talk title, Seminar name, Institution, 2026.
-            <a href="slides/talk1.pdf" target="_blank">Slides</a>
-          </li>
-        </ul>
-      </div>
-      <div class="lang-block" data-lang="en">
-        <h2>Talks</h2>
-        <ul class="clean">
-          <li>
-            Talk title, Seminar name, Institution, 2026.
-            <a href="slides/talk1.pdf" target="_blank">Slides</a>
-          </li>
-        </ul>
-      </div>
+      <h2>Talks</h2>
+      <ul class="clean">
+        <li>
+          Talk title, Seminar name, Institution, 2026.
+          <a href="slides/talk1.pdf" target="_blank">Slides</a>
+        </li>
+      </ul>
     </section>
 
     <section id="teaching">
-      <div class="lang-block active" data-lang="zh">
-        <h2>教学</h2>
-        <ul class="clean">
-          <li>课程名称，学期，职位（TA / Instructor）</li>
-        </ul>
-      </div>
-      <div class="lang-block" data-lang="en">
-        <h2>Teaching</h2>
-        <ul class="clean">
-          <li>Course title, semester, role (TA / Instructor)</li>
-        </ul>
-      </div>
+      <h2>Teaching</h2>
+      <ul class="clean">
+        <li>Course title, semester, role (TA / Instructor)</li>
+      </ul>
     </section>
 
     <section>
-      <div class="lang-block active" data-lang="zh">
-        <h2>说明</h2>
-        <p>
-          这是一个单文件模板。你只需要把这个文件保存为 <code>index.html</code>，再准备好
-          <code>photo.jpg</code>、<code>cv.pdf</code>、以及论文和 slides 文件夹，就可以直接发布到 GitHub Pages。
-        </p>
-      </div>
-      <div class="lang-block" data-lang="en">
-        <h2>Notes</h2>
-        <p>
-          This is a single-file template. Save it as <code>index.html</code>, then prepare
-          <code>photo.jpg</code>, <code>cv.pdf</code>, and your papers/slides folders, and you can publish it directly on GitHub Pages.
-        </p>
-      </div>
+      <h2>Notes</h2>
+      <p>
+        Save this file as <code>index.html</code>. Then upload <code>photo.jpg</code>, <code>cv.pdf</code>,
+        and your papers/slides folders to the repository root.
+      </p>
     </section>
 
     <div class="footer">
       Last updated: April 2026
     </div>
   </div>
-
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('.lang-block').forEach(block => {
-        block.classList.toggle('active', block.dataset.lang === lang);
-      });
-      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-    }
-  </script>
 </body>
 </html>
